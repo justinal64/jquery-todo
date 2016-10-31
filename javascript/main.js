@@ -13,18 +13,6 @@ $addTodo.click(() => {
 
 // eventListener for ToDo editting
 $(document).on("click",".todo span.editable",function() {
-    // Working!!!!
-    // let span = $(this);
-    // console.log("span", span);
-    // let text = span.text();
-    // console.log("text", text);
-    // // Pop up an alert for the user to change the input
-    // // Change this to an input inline if I have time
-    // let new_text = window.prompt("Change value", text);
-    // if (new_text !== null) {
-    //     span.text(new_text);
-    // }
-    // End of Working!!!
 
     var input = $('<input class="editable" />', {
                 'type': 'text',
@@ -34,7 +22,6 @@ $(document).on("click",".todo span.editable",function() {
         $(this).parent().append(input);
         $(this).remove();
         input.focus();
-
 });
 
 $(document).on('blur', 'input.editable', function () {
@@ -56,6 +43,10 @@ $(document).on("change",'input:checkbox',function() {
     }
 });
 
+// eventListener for delete button
+$(document).on("click",".delete",function() {
+    $(this).closest('div').remove();
+});
 
 
 
@@ -66,7 +57,8 @@ function addToTodo(inputValue) {
                           <input class="form-check-input" type="checkbox">
                               Complete
                       </label>
-                      <span class="editable" >${inputValue}</span></div>`);
+                      <span class="editable" >${inputValue}</span>
+                      <button type="button" class="btn btn-danger delete">Delete</button></div>`);
 }
 
 
