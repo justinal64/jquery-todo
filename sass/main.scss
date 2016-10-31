@@ -28,8 +28,13 @@ body {
     margin-top: 2em;
 }
 
-.delete {
+.delete,
+.badge {
     float: right;
+}
+
+.badge {
+    font-size: 1.5em;
 }
 
 

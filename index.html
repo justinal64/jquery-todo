@@ -12,9 +12,9 @@
                 <h1>ToDo List</h1>
             </div>
             <div class="panel-body">
-                <input class="form-control" type="text" id="input-field" value="Add an item to the ToDo List">
+                <input class="form-control" type="text" id="input-field" placeholder="Enter a ToDo">
                 <div class="btn-group" role="group">
-                    <button type="button" id="add-todo" class="btn btn-primary">Add</button>
+                    <button type="button" id="add-todo" class="btn btn-primary" disabled="true">Add</button>
                 </div>
             </div>
         </div>
@@ -23,6 +23,7 @@
             <div class="panel panel-default" id="search">
                 <div class="panel-heading">
                     <h1>Inprogress List</h1>
+                    <span class="badge" id="todo-badge">0</span>
                 </div>
                 <div class="panel-body" id="item-list">
                     <div class="btn-group" role="group">
@@ -35,6 +36,7 @@
             <div class="panel panel-default" id="search">
                 <div class="panel-heading">
                     <h1>Completed List</h1>
+                    <span class="badge" id="complete-badge">0</span>
                 </div>
                 <div class="panel-body" id="complete-list">
                     <div class="btn-group" role="group">
