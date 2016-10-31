@@ -3,4 +3,18 @@ body h1 {
   text-align: center; }
 
 body {
-  background-color: lightblue; }
+  background-color: #00FFFF; }
+
+.todo {
+  margin: 1em; }
+  .todo label {
+    margin-right: 1em; }
+  .todo .editable {
+    font-size: 1.5em;
+    font-weight: bold; }
+
+.panel {
+  margin-top: 2em; }
+
+.delete {
+  float: right; }
